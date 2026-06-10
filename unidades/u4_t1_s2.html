@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.2 Ciclo de Vida de Pruebas | Herramientas de Calidad</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        /* Flujo del Ciclo de Vida */
+        .stlc-flow { display: flex; flex-direction: column; gap: 15px; margin: 30px 0; }
+        .stlc-phase { display: flex; align-items: stretch; background: #f8f9fa; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
+        .phase-name { background: var(--primary-blue); color: white; padding: 20px; width: 180px; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold; flex-shrink: 0; }
+        .phase-content { padding: 15px 20px; font-size: 0.9rem; }
+        .phase-content strong { color: var(--accent-orange); display: block; margin-bottom: 5px; }
+
+        /* Tabla de Caso de Prueba */
+        .test-case-container { overflow-x: auto; margin: 30px 0; }
+        .test-case-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; background: #fff; }
+        .test-case-table th, .test-case-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .test-case-table th { background: #333; color: white; text-transform: uppercase; }
+        .test-case-table tr td:first-child { font-weight: bold; background: #f0f4f8; width: 150px; }
+        .status-fail { color: #dc3545; font-weight: bold; }
+
+        .note-box { background: #eef6ff; border-left: 5px solid var(--primary-blue); padding: 15px; margin: 20px 0; }
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 4: Herramientas de Calidad</h1>
+            <p class="subtitle">Subtema 1.2: Ciclo de vida de pruebas de calidad de software (STLC)</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section>
+                <h2>El proceso de Testing (STLC)</h2>
+                <p>El ciclo de pruebas permite planificar actividades secuenciales y coherentes que garanticen que el producto cumple con los requerimientos. Incluye dos componentes: <strong>Criterios</strong> (entrada/salida) y <strong>Fases</strong>.</p>
+            </section>
+
+            <div class="stlc-flow">
+                <!-- FASE 1 -->
+                <div class="stlc-phase">
+                    <div class="phase-name">1. Requisitos</div>
+                    <div class="phase-content">
+                        <strong>Definición del comportamiento</strong>
+                        Se define cómo debe comportarse el producto final según las partes interesadas. El equipo decide qué tipos de pruebas realizar y en qué entorno.
+                    </div>
+                </div>
+
+                <!-- FASE 2 -->
+                <div class="stlc-phase">
+                    <div class="phase-name">2. Planificación</div>
+                    <div class="phase-content">
+                        <strong>Estrategia y Riesgos</strong>
+                        Incluye la estimación de riesgos, elección de la estrategia de pruebas, definición de secuencias y cálculo del coste total del proyecto.
+                    </div>
+                </div>
+
+                <!-- FASE 3 -->
+                <div class="stlc-phase">
+                    <div class="phase-name">3. Diseño</div>
+                    <div class="phase-content">
+                        <strong>Creación de Casos de Prueba</strong>
+                        Se preparan los escenarios (datos válidos/no válidos). Se diseñan pruebas tanto de caja negra como de caja blanca y scripts automatizados.
+                    </div>
+                </div>
+
+                <!-- FASE 4 -->
+                <div class="stlc-phase">
+                    <div class="phase-name">4. Ejecución</div>
+                    <div class="phase-content">
+                        <strong>Búsqueda de Fallos</strong>
+                        Se ejecutan las pruebas. Si se detecta un fallo, se marca (fallido, bloqueado), se le asigna un ID y se reporta para su corrección y re-prueba.
+                    </div>
+                </div>
+
+                <!-- FASE 5 -->
+                <div class="stlc-phase">
+                    <div class="phase-name">5. Cierre</div>
+                    <div class="phase-content">
+                        <strong>Documentación y Métricas</strong>
+                        Se registran los resultados finales y casos fallidos. Se prepara el informe de cierre con métricas de cobertura, tiempo invertido y calidad lograda.
+                    </div>
+                </div>
+            </div>
+
+            <section class="test-case-container">
+                <h3>Ejemplo de escritura de un Caso de Prueba</h3>
+                <p>A continuación, se muestra el formato estándar para documentar una prueba individual (Figura 6):</p>
+                <table class="test-case-table">
+                    <thead>
+                        <tr>
+                            <th>Campo</th>
+                            <th>Detalles / Ejemplo (Inicio de sesión Gmail)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>ID del Caso</td><td>TC_UI_1</td></tr>
+                        <tr><td>Descripción</td><td>Verificar el inicio de sesión con credenciales válidas.</td></tr>
+                        <tr><td>Condiciones previas</td><td>El usuario debe tener una cuenta de Gmail válida.</td></tr>
+                        <tr><td>Gravedad</td><td><strong>Crítico</strong></td></tr>
+                        <tr><td>Entorno</td><td>Phone 8 Plus + iOS 14.4</td></tr>
+                        <tr><td>Pasos de prueba</td><td>1. Introducir usuario. 2. Introducir contraseña. 3. Pulsar botón login.</td></tr>
+                        <tr><td>Resultado esperado</td><td>Inicio de sesión exitoso.</td></tr>
+                        <tr><td>Resultado actual</td><td>Aparece mensaje de error. Inicio fallido.</td></tr>
+                        <tr><td>Estado</td><td><span class="status-fail">RESULTADO: FALLA</span></td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <div class="note-box">
+                <h4>Importancia de la Documentación</h4>
+                <p>Registrar y documentar cada paso permite que, si en el futuro se produce un error parecido, el equipo pueda solucionarlo rápidamente basándose en el histórico de métricas y soluciones aplicadas.</p>
+            </div>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

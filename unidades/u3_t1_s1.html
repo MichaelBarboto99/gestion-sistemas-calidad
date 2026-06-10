@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.1 Mejora del Proceso del Software | Mejora Continua</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        .spi-definition { background: #eef6ff; border-left: 5px solid var(--primary-blue); padding: 20px; margin-bottom: 25px; }
+        
+        .objectives-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 25px 0; }
+        .obj-card { background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; border-top: 3px solid var(--accent-orange); }
+        .obj-card h4 { margin-top: 0; color: var(--primary-blue); font-size: 1rem; }
+
+        /* Sección de Preguntas Clave */
+        .qa-section { margin: 30px 0; background: #fafafa; padding: 20px; border-radius: 8px; }
+        .qa-item { margin-bottom: 15px; }
+        .qa-item strong { color: var(--accent-orange); display: block; margin-bottom: 5px; }
+
+        /* Fase de Cambio */
+        .change-management { border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-top: 30px; }
+        .virtual-process { background: #fff9f0; padding: 10px; border: 1px dashed var(--accent-orange); margin-top: 10px; }
+
+        .principles-box { background: var(--primary-blue); color: white; padding: 25px; border-radius: 8px; margin: 30px 0; }
+        .principles-box h3 { color: var(--accent-orange); margin-top: 0; }
+        .principles-list { list-style: none; padding: 0; }
+        .principles-list li { margin-bottom: 12px; padding-left: 25px; position: relative; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; }
+        .principles-list li::before { content: "→"; position: absolute; left: 0; color: var(--accent-orange); font-weight: bold; }
+
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 3: Mejoramiento Continuo</h1>
+            <p class="subtitle">Subtema 1.1: Antecedentes y mejora del proceso del software (SPI)</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section>
+                <h2>¿Qué es la Mejora del Proceso (SPI)?</h2>
+                <div class="spi-definition">
+                    <p>Según el <strong>Software Engineering Institute (SEI)</strong>, la mejora del proceso de software tiene por cometido analizar y definir cómo optimizar las prácticas de desarrollo partiendo de una evaluación del proceso en uso.</p>
+                </div>
+                <p>Un proceso es un conjunto de tareas ejecutadas en orden lógico para alcanzar un resultado. En la producción de software, los procesos son a menudo la causa de problemas de productividad y calidad.</p>
+            </section>
+
+            <section>
+                <h3>Objetivos Principales de la Mejora</h3>
+                <div class="objectives-grid">
+                    <div class="obj-card">
+                        <h4>Estado Actual</h4>
+                        <p>Comprender cómo se gestiona la ingeniería de software hoy en la empresa.</p>
+                    </div>
+                    <div class="obj-card">
+                        <h4>Impacto Real</h4>
+                        <p>Seleccionar áreas de mejora que produzcan el máximo beneficio a medio y largo plazo.</p>
+                    </div>
+                    <div class="obj-card">
+                        <h4>Valor al Negocio</h4>
+                        <p>Añadir valor real, evitando perseguir la "utopía" del proceso perfecto.</p>
+                    </div>
+                    <div class="obj-card">
+                        <h4>Factor Humano</h4>
+                        <p>Combinar procesos eficaces con personas motivadas, habilidosas y creativas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="qa-section">
+                <h3>Preguntas previas a la implementación</h3>
+                <div class="qa-item">
+                    <strong>¿Qué hay que cambiar?</strong>
+                    Evaluar la situación y listar problemas sin buscar culpables, llegando a consensos.
+                </div>
+                <div class="qa-item">
+                    <strong>¿Hacia dónde conducir el cambio?</strong>
+                    Tener una visión y estrategia clara, definiendo alternativas a los procesos actuales.
+                </div>
+                <div class="qa-item">
+                    <strong>¿Cómo implementar el cambio?</strong>
+                    Desarrollar tácticas, planes y sincronizar esfuerzos bajo un liderazgo firme.
+                </div>
+            </section>
+
+            <section class="change-management">
+                <h3>Gestión del Cambio y el "Proceso Virtual"</h3>
+                <p>Durante la mejora de procesos, los equipos suelen experimentar <strong>desconcierto e inseguridad</strong>. Es vital el apoyo de la dirección y la realización de <strong>proyectos piloto</strong>.</p>
+                <div class="virtual-process">
+                    <strong>El Proceso Virtual:</strong> Es la etapa intermedia entre el proceso real antiguo y el nuevo, producto de la dilatación o demora en la implementación efectiva.
+                </div>
+            </section>
+
+            <section class="principles-box">
+                <h3>Principios Básicos de Mejora (Figura 2)</h3>
+                <ul class="principles-list">
+                    <li>Buscar el conocimiento organizacional antes que el personal.</li>
+                    <li>Adquirir buenas prácticas mediante capacitación y acompañamiento.</li>
+                    <li>Tomar decisiones basadas en la experiencia capitalizada del grupo.</li>
+                    <li>Calificar los proyectos usando métricas sistemáticas en el tiempo.</li>
+                    <li>Planificar a largo plazo repitiendo el ejercicio de forma continua.</li>
+                </ul>
+            </section>
+
+            <section>
+                <p><strong>Recomendación final:</strong> La certificación (ISO, CMMI) no debe ser el fin, sino la consecuencia natural de un proceso de mejora bien ejecutado, basado en la objetividad y el aprendizaje.</p>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

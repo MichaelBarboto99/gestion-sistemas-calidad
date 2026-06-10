@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.1 Introducción a Herramientas | Herramientas de Calidad</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        .intro-callout { background: #eef6ff; border-left: 5px solid var(--primary-blue); padding: 20px; margin-bottom: 25px; font-size: 1.1rem; }
+
+        /* Características de las herramientas */
+        .features-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0; }
+        .feature-item { background: #f8f9fa; border: 1px solid #ddd; padding: 20px; border-radius: 8px; transition: transform 0.2s; }
+        .feature-item:hover { border-color: var(--accent-orange); transform: translateY(-3px); }
+        .feature-item h4 { margin-top: 0; color: var(--primary-blue); display: flex; align-items: center; gap: 10px; }
+        .feature-item h4::before { content: "★"; color: var(--accent-orange); }
+
+        .selection-box { background: #fff9f0; border: 1px solid #f39200; border-radius: 8px; padding: 25px; margin: 30px 0; }
+        .selection-box h3 { margin-top: 0; color: #d68100; }
+
+        /* Ejemplo W3C */
+        .example-tool { border: 1px solid #dee2e6; border-radius: 8px; padding: 20px; margin-top: 30px; display: flex; align-items: center; gap: 20px; background: #fff; }
+        @media (max-width: 600px) { .example-tool { flex-direction: column; text-align: center; } }
+        .tool-logo { background: #333; color: white; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 8px; flex-shrink: 0; font-size: 1.5rem; }
+
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 4: Herramientas de Calidad</h1>
+            <p class="subtitle">Subtema 2.1: Introducción al ecosistema de herramientas</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section class="intro-callout">
+                <p>En el mundo actual de la calidad de software existe una cantidad exuberante de herramientas disponibles. Desde opciones gratuitas (Open Source) hasta licencias comerciales, el abanico de posibilidades permite a los ingenieros de calidad gestionar de manera integral cada fase del proyecto.</p>
+            </section>
+
+            <section>
+                <h3>Características de las Herramientas Modernas</h3>
+                <p>Las herramientas de calidad actuales han evolucionado para ser accesibles y potentes:</p>
+                
+                <div class="features-container">
+                    <div class="feature-item">
+                        <h4>Interfaz Visual</h4>
+                        <p>Se caracterizan por ser visuales e intuitivas, lo que facilita su adopción por parte de los equipos de desarrollo y QA.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Métodos Estadísticos</h4>
+                        <p>Utilizan métodos estadísticos sencillos para presentar resultados de fácil comprensión y aplicación inmediata.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Aplicabilidad Total</h4>
+                        <p>Pueden usarse en cualquier fase: desde la elicitación de requisitos hasta la verificación final del código programado.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="selection-box">
+                <h3>El Desafío de la Elección</h3>
+                <p>La utilización de una herramienta u otra no es aleatoria. Depende estrictamente de:</p>
+                <ul>
+                    <li><strong>El objetivo perseguido:</strong> Rendimiento, regresión, seguridad, etc.</li>
+                    <li><strong>Especificaciones del software:</strong> Tipo de aplicación (web, móvil, escritorio).</li>
+                    <li><strong>Entorno técnico:</strong> Lenguaje de programación y sistema operativo.</li>
+                    <li><strong>Requisitos específicos:</strong> Normativas que la empresa deba cumplir.</li>
+                </ul>
+                <p><em>Es prioridad del ingeniero explorar y discernir cuál se ajusta mejor a la necesidad real del proyecto.</em></p>
+            </section>
+
+            <section>
+                <h3>Ejemplo Práctico: Validación de Estándares Web</h3>
+                <p>Una de las herramientas más comunes para asegurar la calidad en la sintaxis del código es el validador del W3C:</p>
+                
+                <div class="example-tool">
+                    <div class="tool-logo">W3C</div>
+                    <div>
+                        <h4>W3C Markup Validation Service</h4>
+                        <p>Herramienta gratuita que analiza la sintaxis del código fuente de páginas web. Permite detectar errores indicando la línea exacta de código y la razón por la cual se considera un fallo de estándar.</p>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

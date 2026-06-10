@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.3 Actividades y Métricas | Sistemas de Calidad</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 25px 0; }
+        .metric-card { background: #f0f4f8; padding: 20px; border-radius: 8px; border-top: 4px solid var(--accent-orange); }
+        .metric-card h4 { color: var(--primary-blue); margin-top: 0; }
+        
+        .role-box { display: flex; gap: 20px; margin: 30px 0; flex-wrap: wrap; }
+        .role-card { flex: 1; min-width: 280px; border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
+        .role-card.manager { border-left: 5px solid var(--primary-blue); }
+        .role-card.engineer { border-left: 5px solid var(--accent-orange); }
+        .role-card h3 { margin-top: 0; display: flex; align-items: center; gap: 10px; }
+
+        .table-container { overflow-x: auto; margin: 25px 0; }
+        .metric-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        .metric-table th, .metric-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        .metric-table th { background: var(--primary-blue); color: white; }
+        .metric-table tr:nth-child(even) { background: #f9f9f9; }
+
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 2: Sistemas de Calidad</h1>
+            <p class="subtitle">Subtema 1.3: Actividades y métricas de control de calidad de software</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section>
+                <h2>¿Qué es una Métrica de Software?</h2>
+                <p>Es cualquier variable utilizada para medir el desempeño de un aspecto crítico del proyecto. Debe basarse en un <strong>valor numérico</strong> que proporcione una visión objetiva de la realidad.</p>
+                
+                <h3>Características de una buena métrica:</h3>
+                <ul>
+                    <li><strong>Simple y fácil de calcular:</strong> No debe requerir un esfuerzo inusual.</li>
+                    <li><strong>Empírica e intuitivamente persuasiva:</strong> Debe tener sentido lógico para el ingeniero.</li>
+                    <li><strong>Independiente del lenguaje:</strong> No debe depender de la sintaxis de programación.</li>
+                    <li><strong>Mecanismo de realimentación:</strong> Debe llevar a un producto de superior calidad.</li>
+                </ul>
+            </section>
+
+            <section class="role-box">
+                <div class="role-card manager">
+                    <h3>Para Gerentes</h3>
+                    <p>Buscan responder:</p>
+                    <ul>
+                        <li>¿Cuánto cuesta este proceso?</li>
+                        <li>¿Qué productividad tiene el personal?</li>
+                        <li>¿Estará el usuario satisfecho?</li>
+                    </ul>
+                </div>
+                <div class="role-card engineer">
+                    <h3>Para Ingenieros</h3>
+                    <p>Buscan responder:</p>
+                    <ul>
+                        <li>¿Podemos verificar los requerimientos?</li>
+                        <li>¿Hemos encontrado todos los errores?</li>
+                        <li>¿Qué pasará en el futuro?</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Contextos de Aplicación</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h4>El Proyecto</h4>
+                        <p>Facilitan la gestión del riesgo y permiten tomar el pulso a la iniciativa desde su inicio.</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>El Producto</h4>
+                        <p>Miden características de los entregables (modelos, componentes, documentación).</p>
+                    </div>
+                    <div class="metric-card">
+                        <h4>El Proceso</h4>
+                        <p>Identifican mejores prácticas para exportarlas a futuros proyectos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Ejemplos de Métricas Clave</h2>
+                <div class="table-container">
+                    <table class="metric-table">
+                        <thead>
+                            <tr>
+                                <th>Productividad (Proceso)</th>
+                                <th>Calidad (Requisitos)</th>
+                                <th>Tamaño y Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Reutilización de código</td>
+                                <td>Integridad y Seguridad</td>
+                                <td>Errores por KLDC (Mil líneas)</td>
+                            </tr>
+                            <tr>
+                                <td>Fiabilidad</td>
+                                <td>Facilidad de mantenimiento</td>
+                                <td>Costo ($ por LDC)</td>
+                            </tr>
+                            <tr>
+                                <td>Entrega a tiempo</td>
+                                <td>Facilidad de uso</td>
+                                <td>LDC por persona-mes</td>
+                            </tr>
+                            <tr>
+                                <td>Distribución de tareas</td>
+                                <td>Probabilidad de amenaza</td>
+                                <td>Páginas de documentación</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section style="background: #fff9f0; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                <h3>Métricas de Calidad Específicas:</h3>
+                <ul>
+                    <li><strong>Exactitud:</strong> Validez y precisión de la estructura.</li>
+                    <li><strong>Rendimiento:</strong> Desempeño de módulos y del sistema completo.</li>
+                    <li><strong>Usabilidad:</strong> Qué tan intuitivo y "user-friendly" es el software.</li>
+                    <li><strong>Eficiencia:</strong> Minimización de latencias y velocidad de respuesta.</li>
+                </ul>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

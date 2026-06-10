@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.3 Elección de Herramientas | Herramientas de Calidad</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        .selection-intro { border-left: 5px solid var(--accent-orange); padding-left: 20px; margin-bottom: 30px; }
+
+        /* Estilo para las Preguntas Guía */
+        .questions-container { background: #003366; color: white; padding: 25px; border-radius: 8px; margin: 25px 0; }
+        .questions-container h3 { color: var(--accent-orange); margin-top: 0; }
+        .question-list { list-style: none; padding: 0; }
+        .question-list li { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; gap: 10px; }
+        .question-list li:last-child { border-bottom: none; }
+        .question-list i { color: var(--accent-orange); margin-top: 4px; }
+
+        /* Factores de Decisión */
+        .factors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0; }
+        .factor-card { background: #f8f9fa; border: 1px solid #ddd; padding: 20px; border-radius: 8px; position: relative; }
+        .factor-card h4 { margin: 0 0 10px 0; color: var(--primary-blue); font-size: 1rem; border-bottom: 2px solid var(--accent-orange); display: inline-block; }
+        .factor-card p { font-size: 0.9rem; color: #555; margin: 0; }
+
+        .trial-box { background: #fff4e6; border: 2px dashed #f39200; padding: 20px; border-radius: 8px; margin-top: 30px; text-align: center; }
+        .trial-box strong { color: #d68100; font-size: 1.1rem; display: block; margin-bottom: 5px; }
+
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 4: Herramientas de Calidad</h1>
+            <p class="subtitle">Subtema 2.3: Elección de las mejores herramientas de calidad</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section class="selection-intro">
+                <h2>¿Cómo elegir la herramienta correcta?</h2>
+                <p>Para seleccionar la herramienta adecuada, hay que considerar factores que van más allá del costo. Cada proyecto tiene características únicas; lo que funciona para una aplicación móvil puede no ser eficiente para un sistema de gestión bancaria.</p>
+            </section>
+
+            <section class="questions-container">
+                <h3>Preguntas Guía para la Selección</h3>
+                <p>Contestar estas preguntas ayudará a inclinar la decisión hacia la opción más técnica y rentable:</p>
+                <ul class="question-list">
+                    <li><i class="fas fa-question-circle"></i> ¿Qué problemas específicos estoy tratando de resolver con la automatización?</li>
+                    <li><i class="fas fa-question-circle"></i> ¿Qué tipo de pruebas se deben realizar (rendimiento, seguridad, funcional)?</li>
+                    <li><i class="fas fa-question-circle"></i> ¿En qué idioma (lenguaje de programación) está integrada la aplicación?</li>
+                    <li><i class="fas fa-question-circle"></i> ¿En qué sistemas operativos y navegadores se debe probar?</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Factores Críticos a Evaluar</h3>
+                <div class="factors-grid">
+                    <div class="factor-card">
+                        <h4>Compatibilidad</h4>
+                        <p>Asegurar que la herramienta soporte el comportamiento entre diferentes navegadores o plataformas de uso.</p>
+                    </div>
+                    <div class="factor-card">
+                        <h4>Curva de Aprendizaje</h4>
+                        <p>Valorar cuánto tiempo le tomará al equipo aprender a usar y adaptar la herramienta al flujo de trabajo.</p>
+                    </div>
+                    <div class="factor-card">
+                        <h4>Requisitos Técnicos</h4>
+                        <p>Validar si la infraestructura actual (hardware y software) soporta la instalación de la herramienta.</p>
+                    </div>
+                    <div class="factor-card">
+                        <h4>Consistencia del Proyecto</h4>
+                        <p>Mantener una estructura única. Por ejemplo, evitar pruebas en C# si el proyecto es React Native.</p>
+                    </div>
+                    <div class="factor-card">
+                        <h4>Soporte y Actualizaciones</h4>
+                        <p>Verificar la disponibilidad de soporte al cliente y la frecuencia de actualizaciones del proveedor.</p>
+                    </div>
+                    <div class="factor-card">
+                        <h4>Presupuesto Total</h4>
+                        <p>No solo el costo de la licencia, sino también la capacitación de los testers y el mantenimiento.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="trial-box">
+                <strong>Recomendación del Autor:</strong>
+                <p>Ninguna herramienta debe ser definitiva de inmediato. Tómese el tiempo para experimentar con versiones de prueba o <em>Open Source</em>. Muchas herramientas comerciales ofrecen pruebas gratuitas que permiten comprobar si realmente cumplen con lo que la empresa requiere.</p>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

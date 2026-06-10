@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.4 Costos de la Calidad | Sistemas de Calidad</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        /* Contenedores de Costos */
+        .cost-container { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin: 30px 0; }
+        @media (max-width: 768px) { .cost-container { grid-template-columns: 1fr; } }
+        
+        .cost-box { padding: 20px; border-radius: 8px; position: relative; }
+        .cost-box h3 { margin-top: 0; text-align: center; text-transform: uppercase; font-size: 1rem; }
+        
+        .conformity { background: #e8f4fd; border: 2px solid var(--primary-blue); }
+        .non-conformity { background: #fff5f5; border: 2px solid #dc3545; }
+        
+        .tag-investment { background: var(--primary-blue); color: white; padding: 3px 10px; border-radius: 4px; font-size: 0.8rem; display: block; width: fit-content; margin: 0 auto 15px; }
+        .tag-loss { background: #dc3545; color: white; padding: 3px 10px; border-radius: 4px; font-size: 0.8rem; display: block; width: fit-content; margin: 0 auto 15px; }
+
+        .example-list { list-style: none; padding: 0; font-size: 0.9rem; }
+        .example-list li { margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .conformity .example-list li::before { content: "✔"; position: absolute; left: 0; color: var(--primary-blue); }
+        .non-conformity .example-list li::before { content: "✘"; position: absolute; left: 0; color: #dc3545; }
+
+        .highlight-quote { background: #fff9f0; border-left: 5px solid var(--accent-orange); padding: 15px; margin: 20px 0; font-style: italic; }
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 2: Sistemas de Calidad</h1>
+            <p class="subtitle">Subtema 1.4: Costos de la calidad del software: Prevención, evaluación y fallo</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section>
+                <h2>Concepto de Costos de Calidad</h2>
+                <p>Son los costos incurridos en el diseño, implementación y mantenimiento de los sistemas de calidad. Se dividen en dos grandes grupos: los que se usan para fabricar un producto con la calidad ofrecida y los derivados de ineficiencias o errores.</p>
+                <div class="highlight-quote">
+                    "El costo de la no calidad es conocido como el 'precio del incumplimiento' o el costo de hacer las cosas mal o incorrectamente."
+                </div>
+            </section>
+
+            <div class="cost-container">
+                
+                <!-- COSTOS DE CONFORMIDAD -->
+                <div class="cost-box conformity">
+                    <span class="tag-investment">INVERSIÓN (CONTROLABLES)</span>
+                    <h3>Costos de Conformidad</h3>
+                    <p>Esfuerzos para asegurar la calidad y prevenir defectos.</p>
+                    <ul class="example-list">
+                        <li><strong>Prevención:</strong> Planeación de la calidad, mejora de procesos, capacitación técnica, definición de estándares y consultoría.</li>
+                        <li><strong>Evaluación:</strong> Revisión de requerimientos, inspecciones de código, pruebas unitarias e integrales, y auditorías de calidad.</li>
+                    </ul>
+                </div>
+
+                <!-- COSTOS DE NO CONFORMIDAD -->
+                <div class="cost-box non-conformity">
+                    <span class="tag-loss">PÉRDIDA (INCONTROLABLES)</span>
+                    <h3>Costos de No Conformidad</h3>
+                    <p>Costos por falta de calidad y errores detectados tarde.</p>
+                    <ul class="example-list">
+                        <li><strong>Fallas Internas:</strong> Costo de corregir problemas antes de que el usuario los detecte (retrabajo, corrección de bugs en desarrollo).</li>
+                        <li><strong>Fallas Externas:</strong> Problemas detectados por el cliente. Incluye soporte técnico, devoluciones, garantías, multas y pérdida de reputación.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <section>
+                <h2>Impacto en el Desarrollo de Software</h2>
+                <p>En el software, a diferencia de otras industrias, no se puede reducir el costo de materiales físicos o inventarios. El costo principal radica en el <strong>tiempo de los expertos</strong>.</p>
+                <ul>
+                    <li><strong>La Regla de Oro:</strong> Prevenir defectos reduce drásticamente los costos finales.</li>
+                    <li><strong>Defecto vs Falla:</strong> Un <em>error</em> se convierte en <em>defecto</em> cuando el producto se aprueba sin notarlo, y se manifiesta como una <em>falla</em> en el ambiente del cliente.</li>
+                    <li><strong>Costos para el cliente:</strong> El análisis de calidad organizacional no suele incluir las pérdidas del usuario (tiempo desperdiciado, pérdida de datos o quiebra del negocio).</li>
+                </ul>
+            </section>
+
+            <section style="background: #eef6ff; padding: 20px; border-radius: 8px; margin-top: 30px;">
+                <h3>¿Cómo prevenir estos costos?</h3>
+                <p>La prevención se logra adoptando metodologías que garanticen la retroalimentación oportuna (Scrum, XP), capacitantes al personal y utilizando frameworks de desarrollo que aseguren la consistencia del código.</p>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

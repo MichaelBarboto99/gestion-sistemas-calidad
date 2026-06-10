@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.4 Métricas de Calidad Aplicadas | Sistemas de Calidad</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        /* Tabla de Escalas */
+        .scale-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .scale-table th, .scale-table td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+        .scale-table th { background: var(--primary-blue); color: white; }
+        .row-high { background: #d4edda; font-weight: bold; }
+        .row-med { background: #fff3cd; }
+        .row-low { background: #f8d7da; }
+
+        /* Ficha de Métrica (Estilo GQM) */
+        .metric-template { border: 2px solid var(--primary-blue); border-radius: 8px; margin: 25px 0; overflow: hidden; }
+        .metric-template-header { background: var(--primary-blue); color: white; padding: 10px 20px; font-weight: bold; }
+        .metric-template-body { display: grid; grid-template-columns: 150px 1fr; font-size: 0.9rem; }
+        .label { background: #f0f4f8; padding: 10px; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; font-weight: bold; color: var(--primary-blue); }
+        .value { padding: 10px; border-bottom: 1px solid #ddd; }
+        
+        .formula-box { background: #2d3436; color: #00ff00; padding: 15px; font-family: 'Courier New', Courier, monospace; border-radius: 5px; text-align: center; margin: 10px 0; font-size: 1.2rem; }
+
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 2: Sistemas de Calidad</h1>
+            <p class="subtitle">Subtema 2.4: Aplicación práctica de métricas de calidad</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section>
+                <h2>Definición del Proceso de Evaluación</h2>
+                <p>Para evaluar la calidad de forma objetiva, es necesario definir escalas de puntuación y aplicar métricas específicas sobre el producto y el proceso de pruebas.</p>
+                
+                <h3>1. Escalas de Medición (Figura 13)</h3>
+                <table class="scale-table">
+                    <thead>
+                        <tr>
+                            <th>Rango de Medición</th>
+                            <th>Puntuación</th>
+                            <th>Grado de Satisfacción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row-high">
+                            <td>8,75 — 10</td>
+                            <td>Cumple requisitos</td>
+                            <td>Muy Satisfactorio</td>
+                        </tr>
+                        <tr class="row-med">
+                            <td>5 — 8,74</td>
+                            <td>Aceptable</td>
+                            <td>Satisfactorio</td>
+                        </tr>
+                        <tr class="row-low">
+                            <td>2,75 — 4,9</td>
+                            <td>Mínimamente aceptable</td>
+                            <td>Insatisfactorio</td>
+                        </tr>
+                        <tr class="row-low">
+                            <td>0 — 2,74</td>
+                            <td>Inaceptable</td>
+                            <td>Insatisfactorio</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Ejemplo de Métrica: Eliminación de Defectos</h2>
+                <p>Esta métrica evalúa la eficacia del equipo para corregir fallos detectados durante las pruebas.</p>
+                
+                <div class="metric-template">
+                    <div class="metric-template-header">Ficha Técnica de Métrica M2</div>
+                    <div class="metric-template-body">
+                        <div class="label">Nombre</div><div class="value">Eliminación de defectos</div>
+                        <div class="label">Tipo</div><div class="value">Cuantitativo (Calidad del Producto)</div>
+                        <div class="label">Descripción</div><div class="value">¿Cuántos errores detectados han sido corregidos satisfactoriamente?</div>
+                        <div class="label">Fórmula</div>
+                        <div class="value">
+                            <div class="formula-box">X = A / B</div>
+                            <small>Donde A = N° defectos corregidos | B = N° defectos detectados</small>
+                        </div>
+                        <div class="label">Frecuencia</div><div class="value">Semanal (Fase de ejecución de pruebas)</div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Ejemplo de Métrica: Requerimientos Probados</h2>
+                <p>Utilizando el enfoque <strong>GQM (Meta-Pregunta-Métrica)</strong>, se busca determinar el porcentaje de cobertura de las pruebas.</p>
+                
+                <div class="metric-template">
+                    <div class="metric-template-header">Ficha Técnica de Métrica M15</div>
+                    <div class="metric-template-body">
+                        <div class="label">Meta (Goal)</div><div class="value">Evaluar el proceso de prueba</div>
+                        <div class="label">Pregunta</div><div class="value">¿Se requiere saber el número de requerimientos probados?</div>
+                        <div class="label">Métrica</div><div class="value">Porcentaje de requerimientos cubiertos con casos de prueba diseñados</div>
+                        <div class="label">Fórmula</div>
+                        <div class="value">
+                            <div class="formula-box">X = (A / B) * 100</div>
+                            <small>Donde A = Requerimientos con casos diseñados | B = Total de requerimientos</small>
+                        </div>
+                        <div class="label">Valor deseado</div><div class="value">100%</div>
+                    </div>
+                </div>
+            </section>
+
+            <section style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
+                <h3>Uso de Matrices de Evaluación</h3>
+                <p>Al final, estos valores se vuelcan en una <strong>Matriz de Calidad</strong> (como se muestra en la Figura 16 del compendio), donde se cruza la característica (ej. Fiabilidad), la subcaracterística (ej. Madurez) y el valor obtenido para determinar si el producto puede ser liberado a producción.</p>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.1 ISO/IEC 33000 (SPICE) | Sistemas de Calidad</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        .spice-header { background: var(--primary-blue); color: white; padding: 20px; border-radius: 8px; margin-bottom: 25px; border-left: 10px solid var(--accent-orange); }
+        
+        .arch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0; }
+        .arch-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; text-align: center; background: #fafafa; }
+        .arch-card i { font-size: 2rem; color: var(--accent-orange); margin-bottom: 10px; display: block; }
+        .arch-card h4 { color: var(--primary-blue); margin-top: 0; }
+
+        /* Niveles de Capacidad */
+        .capability-ladder { margin: 30px 0; }
+        .ladder-step { display: flex; align-items: center; margin-bottom: 15px; background: #fff; border: 1px solid #eee; border-radius: 50px 10px 10px 50px; transition: transform 0.2s; }
+        .ladder-step:hover { transform: translateX(10px); border-color: var(--accent-orange); }
+        .step-num { background: var(--primary-blue); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; flex-shrink: 0; border: 4px solid #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .step-content { padding: 10px 20px; }
+        .step-content strong { color: var(--primary-blue); font-size: 1.1rem; }
+
+        .note-box { background: #fff4e6; border-left: 5px solid var(--accent-orange); padding: 15px; margin: 20px 0; font-size: 0.95rem; }
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 2: Sistemas de Calidad</h1>
+            <p class="subtitle">Subtema 2.1: ISO/IEC 33000. Estructura y procesos de software</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section class="spice-header">
+                <h2>ISO/IEC 33000: El sucesor de SPICE</h2>
+                <p>La norma ISO/IEC 33000 reemplazó a la antigua 15504. Se orienta a determinar la <strong>Capacidad de Mejora del Proceso de Software</strong>. No es un modelo en sí, sino un <strong>marco de trabajo</strong> para métodos de evaluación.</p>
+            </section>
+
+            <section>
+                <h3>Objetivos Principales</h3>
+                <ul>
+                    <li>Comprobar la evolución de una empresa a lo largo del tiempo.</li>
+                    <li>Seguimiento de la situación frente a la competencia.</li>
+                    <li>Determinar estrategias de mejora continua.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Arquitectura de 3 Componentes</h3>
+                <p>Para evaluar procesos, la norma define la siguiente estructura:</p>
+                <div class="arch-grid">
+                    <div class="arch-card">
+                        <h4>Modelos de Procesos</h4>
+                        <p>Definen las entidades que son objeto de evaluación.</p>
+                    </div>
+                    <div class="arch-card">
+                        <h4>Marcos de Medición</h4>
+                        <p>Proporcionan las escalas para evaluar características (como la capacidad).</p>
+                    </div>
+                    <div class="arch-card">
+                        <h4>Procesos Documentados</h4>
+                        <p>La especificación del camino a seguir durante la realización de evaluaciones.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="capability-ladder">
+                <h3>Niveles de Capacidad de Proceso</h3>
+                <p>Caracterización de la capacidad de un proceso para cumplir objetivos comerciales:</p>
+
+                <div class="ladder-step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <strong>Proceso Realizado:</strong> El proceso logra sus propósitos básicos a través de sus resultados.
+                    </div>
+                </div>
+
+                <div class="ladder-step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <strong>Proceso Administrado:</strong> Se evalúa la gestión del rendimiento y de los productos de trabajo.
+                    </div>
+                </div>
+
+                <div class="ladder-step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <strong>Proceso Establecido:</strong> Se mantiene un proceso estándar que respalda la implementación definida.
+                    </div>
+                </div>
+
+                <div class="ladder-step">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <strong>Proceso Predecible:</strong> Uso de análisis y control cuantitativo para gestionar el rendimiento.
+                    </div>
+                </div>
+
+                <div class="ladder-step">
+                    <div class="step-num">5</div>
+                    <div class="step-content">
+                        <strong>Proceso Innovador:</strong> Mejora continua basada en investigaciones y cambios tecnológicos.
+                    </div>
+                </div>
+            </section>
+
+            <div class="note-box">
+                <strong>Nota Importante:</strong> A diferencia de CMMI, que evalúa la madurez organizacional integrada, la escala de capacidad de la ISO 33000 se enfoca en el desempeño de **áreas de proceso individuales**.
+            </div>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

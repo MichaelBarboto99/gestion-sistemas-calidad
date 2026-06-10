@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.1 Calidad en la Construcción de Software | Gestión de Calidad</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .quote-box { background: #f0f4f8; border-left: 5px solid var(--primary-blue); padding: 20px; margin: 20px 0; font-style: italic; }
+        .timeline { position: relative; margin: 30px 0; padding-left: 40px; border-left: 2px solid #ddd; }
+        .timeline-item { margin-bottom: 30px; position: relative; }
+        .timeline-item::before { content: ""; position: absolute; left: -46px; top: 5px; width: 10px; height: 10px; background: var(--accent-orange); border-radius: 50%; border: 2px solid white; }
+        .timeline-year { font-weight: bold; color: var(--primary-blue); display: block; margin-bottom: 5px; }
+        .author-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .author-card { border: 1px solid #e1e4e8; border-radius: 8px; padding: 20px; transition: transform 0.2s; }
+        .author-card:hover { transform: translateY(-5px); border-color: var(--accent-orange); }
+        .author-card strong { color: var(--primary-blue); display: block; margin-bottom: 10px; font-size: 1.1rem; }
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 1: Fundamentos de Calidad</h1>
+            <p class="subtitle">Subtema 2.1: Calidad enfocada a la construcción de software</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section>
+                <h2>La Necesidad de Medir</h2>
+                <p>Para gestionar la calidad, es imprescindible contar con parámetros de evaluación. Como mencionaba el físico matemático <strong>Lord Kelvin</strong>:</p>
+                <div class="quote-box">
+                    "Lo que no se define no se puede medir, lo que no se mide no se puede mejorar y lo que no se mejora se degrada siempre."
+                </div>
+                <p>Las normas y estándares en el software han sido concebidos por grupos de expertos internacionales para orientar a las empresas a "hacer las cosas bien" desde el inicio.</p>
+            </section>
+
+            <section>
+                <h2>Evolución Histórica de la Calidad de Software</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-year">Años 50</span>
+                        <p>Inicia en entornos militares (EE.UU.). La calidad se limitaba a entregar la solución dentro del tiempo y presupuesto establecido para hardware específico.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">Años 60 - 70</span>
+                        <p>Proyectos complejos (como los de IBM) sufren contratiempos, evidenciando la necesidad de una <strong>Ingeniería de Software</strong> formal que no se concreta hasta 1980.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">Años 80</span>
+                        <p>Creación del SEI (Software Engineering Institute). Auge de los PCs y Microsoft. Deming postula que la calidad del producto depende directamente del <strong>proceso utilizado para crearlo</strong> (SPI - Software Process Improvement).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-year">Años 90 - Actualidad</span>
+                        <p>Masificación del Internet. Aparecen metodologías ágiles (SCRUM, XP) y modelos como CMMi e ITIL. Se identifican atributos clave: seguridad, usabilidad, escalabilidad y mantenibilidad.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Definiciones Fundamentales</h2>
+                <p>Tres visiones clave sobre qué significa realmente la "Calidad de Software":</p>
+                
+                <div class="author-grid">
+                    <div class="author-card">
+                        <strong>Roger Pressman</strong>
+                        <p>"Cumplimiento de requerimientos funcionales y de performance explícitos, estándares de desarrollo documentados y características implícitas esperadas."</p>
+                    </div>
+                    <div class="author-card">
+                        <strong>Al Davis</strong>
+                        <p>"La calidad no se trata de tener cero defectos, sino de satisfacer las necesidades del cliente (aunque estas no estén correctamente documentadas)."</p>
+                    </div>
+                    <div class="author-card">
+                        <strong>IEEE (Glosario)</strong>
+                        <p>"El grado con el cual un sistema, componente o proceso cumple con los requerimientos y con las necesidades y expectativas del usuario."</p>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

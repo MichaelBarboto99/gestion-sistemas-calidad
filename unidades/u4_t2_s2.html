@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.2 Tipos de Herramientas | Herramientas de Calidad</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        /* Sección de Calidad de Datos */
+        .data-quality-box { background: #f0f4f8; border-left: 5px solid var(--primary-blue); padding: 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .data-process-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .data-tag { background: var(--primary-blue); color: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; }
+
+        /* Sección de Usabilidad */
+        .usability-methods { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 25px 0; }
+        .method-card { border: 1px solid #ddd; border-top: 4px solid var(--accent-orange); padding: 15px; border-radius: 8px; }
+        .method-card h4 { margin-top: 0; color: var(--primary-blue); }
+
+        /* Grid de Herramientas de Testing */
+        .testing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 15px; margin-top: 30px; }
+        .test-type-card { background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .test-type-card h5 { margin: 0 0 10px 0; color: var(--accent-orange); text-transform: uppercase; font-size: 0.85rem; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .test-type-card p { font-size: 0.85rem; margin: 0; color: #555; }
+
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 4: Herramientas de Calidad</h1>
+            <p class="subtitle">Subtema 2.2: Clasificación y tipos de herramientas de calidad de software</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section>
+                <h2>Categorización de Herramientas</h2>
+                <p>Dada la complejidad de los sistemas actuales (nube, IoT, redes sociales), las herramientas se agrupan según el área de impacto en la calidad del producto.</p>
+            </section>
+
+            <!-- CALIDAD DE DATOS -->
+            <section>
+                <h3>1. Calidad de Datos</h3>
+                <div class="data-quality-box">
+                    <p>Permiten inspeccionar y analizar datos comerciales para asegurar que sean útiles en la toma de decisiones. Es crucial en entornos de nube donde los datos provienen de múltiples fuentes (registros, bases de datos, redes sociales).</p>
+                    <strong>Procesos involucrados:</strong>
+                    <div class="data-process-list">
+                        <span class="data-tag">Ingesta</span>
+                        <span class="data-tag">Limpieza</span>
+                        <span class="data-tag">Estandarización</span>
+                        <span class="data-tag">Deduplicación</span>
+                        <span class="data-tag">Fusión</span>
+                        <span class="data-tag">Exportación</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- USABILIDAD -->
+            <section>
+                <h3>2. Usabilidad de Sistemas</h3>
+                <p>Evalúa atributos como efectividad, eficiencia, satisfacción y facilidad de aprendizaje. Los métodos principales son:</p>
+                <div class="usability-methods">
+                    <div class="method-card">
+                        <h4>De Inspección</h4>
+                        <p>Realizada por expertos. Evalúa heurísticas, recorridos cognitivos y consistencia de la interfaz.</p>
+                    </div>
+                    <div class="method-card">
+                        <h4>De Indagación</h4>
+                        <p>Conversación directa con usuarios finales mediante entrevistas, cuestionarios y grupos focales.</p>
+                    </div>
+                    <div class="method-card">
+                        <h4>De Testing</h4>
+                        <p>Observación de tareas en tiempo real. Técnicas: "pensar en voz alta" y ordenamiento de tarjetas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTING ESPECIALIZADO -->
+            <section>
+                <h3>3. Herramientas de Prueba Especializadas</h3>
+                <div class="testing-grid">
+                    <div class="test-type-card">
+                        <h5>Pruebas Funcionales</h5>
+                        <p>Validan cada función frente a los requisitos del cliente (entradas vs salidas).</p>
+                    </div>
+                    <div class="test-type-card">
+                        <h5>Rendimiento</h5>
+                        <p>Evalúan escalabilidad, carga masiva y cuellos de botella en servidores.</p>
+                    </div>
+                    <div class="test-type-card">
+                        <h5>Seguimiento de Defectos</h5>
+                        <p>Identifican errores de estilo, duplicación de código y vulnerabilidades.</p>
+                    </div>
+                    <div class="test-type-card">
+                        <h5>Pruebas de APIs</h5>
+                        <p>Permiten crear casos automatizados para entornos web y móviles.</p>
+                    </div>
+                    <div class="test-type-card">
+                        <h5>Seguridad</h5>
+                        <p>Detectan vulnerabilidades como inyección SQL y accesos no autorizados.</p>
+                    </div>
+                    <div class="test-type-card">
+                        <h5>En Navegadores</h5>
+                        <p>Aseguran que el software funcione igual en Chrome, Safari, móviles y escritorio.</p>
+                    </div>
+                    <div class="test-type-card">
+                        <h5>Pruebas Móviles</h5>
+                        <p>Automatización de operaciones específicas para dispositivos móviles.</p>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

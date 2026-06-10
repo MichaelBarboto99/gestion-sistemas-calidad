@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.3 Estructura de Modelos de Calidad | Gestión de Calidad</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .model-type-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 25px 0; }
+        @media (max-width: 768px) { .model-type-container { grid-template-columns: 1fr; } }
+        .model-box { border: 2px solid var(--primary-blue); border-radius: 10px; padding: 20px; }
+        .model-box h3 { color: var(--primary-blue); margin-top: 0; text-align: center; border-bottom: 2px solid var(--accent-orange); padding-bottom: 10px; }
+        .highlight-norm { color: var(--accent-orange); font-weight: bold; }
+        .feature-list { list-style: none; padding: 0; }
+        .feature-list li { margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .feature-list li::before { content: "✔"; position: absolute; left: 0; color: var(--accent-orange); font-weight: bold; }
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+        .quote-deming { background: #fdf2e9; padding: 15px; border-left: 5px solid var(--accent-orange); font-style: italic; margin: 20px 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 1: Fundamentos de Calidad</h1>
+            <p class="subtitle">Subtema 2.3: Enfoque y estructura de los modelos de calidad de software</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section>
+                <h2>Importancia de los Modelos</h2>
+                <p>Los modelos de calidad integran las mejores prácticas y permiten medir los avances. Según Scalone (2006), proponen temas de administración en los que cada organización debe hacer énfasis.</p>
+                <div class="quote-deming">
+                    "La premisa de la calidad en procesos dada por Deming establece que esta se reflejará en la calidad del producto final."
+                </div>
+            </section>
+
+            <section class="model-type-container">
+                <!-- MODELOS DE PROCESO -->
+                <div class="model-box">
+                    <h3>Calidad de Proceso</h3>
+                    <p>Se enfocan en mejorar las actividades de desarrollo para asegurar un resultado predecible.</p>
+                    <ul class="feature-list">
+                        <li><span class="highlight-norm">Bootstrap:</span> Metodología de 6 actividades (Necesidad, Mejora, Preparación, Análisis, Implantación, Finalización).</li>
+                        <li><span class="highlight-norm">PSP / TSP:</span> Procesos para el trabajo personal y en equipo.</li>
+                        <li><span class="highlight-norm">ISO/IEC 33000:</span> Orientada específicamente a procesos de software.</li>
+                        <li><span class="highlight-norm">CMMi:</span> Modelo de madurez líder en la industria.</li>
+                    </ul>
+                </div>
+
+                <!-- MODELOS DE PRODUCTO -->
+                <div class="model-box">
+                    <h3>Calidad de Producto</h3>
+                    <p>Se centran en evaluar las características técnicas y el comportamiento del software final.</p>
+                    <ul class="feature-list">
+                        <li><span class="highlight-norm">FURPS:</span> Evalúa Funcionalidad, Usabilidad, Confiabilidad (Reliability), Desempeño y Soportabilidad.</li>
+                        <li><span class="highlight-norm">ISO/IEC 25000 (SQuaRE):</span> Guía para evaluar atributos de calidad como seguridad y portabilidad.</li>
+                        <li><span class="highlight-norm">WebQEM:</span> Metodología específica para la evaluación de sitios web en 6 fases.</li>
+                        <li><span class="highlight-norm">Modelos Clásicos:</span> McCall, Boehm y GQM (Goal Question Metric).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Estructura de Evaluación</h2>
+                <p>Un modelo de calidad generalmente asocia a un proceso la <strong>documentación de soporte</strong>. Esta sirve como referencia para evaluar factores mediante el uso de <strong>métricas</strong>, lo que permite obtener resultados objetivos sobre la eficiencia del desarrollo.</p>
+                
+                <h3>Resumen de Normas Orientadas a Software:</h3>
+                <ul>
+                    <li><strong>ISO/IEC 12207:</strong> Ciclo de vida del software (procesos principales y de apoyo).</li>
+                    <li><strong>ISO/IEC 25010:</strong> Criterios de usabilidad y calidad del producto.</li>
+                    <li><strong>ISO/IEC 25012:</strong> Calidad de los datos.</li>
+                    <li><strong>ISO/IEC 27000:</strong> Estándares de seguridad de la información.</li>
+                </ul>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

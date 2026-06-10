@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.1 Tipos de Pruebas de Software | Herramientas de Calidad</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        /* Cajas de Pruebas */
+        .test-type-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+        @media (max-width: 768px) { .test-type-container { grid-template-columns: 1fr; } }
+        
+        .test-box { padding: 25px; border-radius: 8px; position: relative; border: 1px solid #ddd; }
+        .test-box h3 { margin-top: 0; color: var(--primary-blue); border-bottom: 2px solid var(--accent-orange); padding-bottom: 10px; }
+        
+        .black-box { background: #f4f4f4; border-left: 8px solid #333; }
+        .white-box { background: #fff; border-left: 8px solid var(--primary-blue); }
+
+        /* Iconografía para No Funcionales */
+        .non-functional-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 25px 0; }
+        .nf-item { background: #eef6ff; padding: 15px; border-radius: 8px; text-align: center; border: 1px solid #bcdff1; font-weight: bold; color: var(--primary-blue); font-size: 0.9rem; }
+
+        .smoke-test { background: #fff5f5; border: 2px dashed #dc3545; padding: 20px; border-radius: 8px; margin: 30px 0; }
+        .smoke-test h4 { color: #dc3545; margin-top: 0; }
+
+        .example-box { background: #fdf2e9; border-radius: 8px; padding: 20px; margin-top: 20px; border: 1px solid #f39200; }
+        .example-box code { display: block; background: white; padding: 10px; margin-top: 10px; border-radius: 4px; border: 1px solid #ddd; }
+
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 4: Herramientas de Calidad</h1>
+            <p class="subtitle">Subtema 1.1: Tipos de pruebas de software (Funcionales y No Funcionales)</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section>
+                <h2>El objetivo de las Pruebas</h2>
+                <p>Las pruebas o <em>tests</em> son el mecanismo para evidenciar que el software se comporta como se espera y cumple con lo especificado por el cliente. Es importante recordar que <strong>no es posible garantizar la ausencia total de defectos</strong>, solo se prueba una parte de los infinitos usos posibles.</p>
+            </section>
+
+            <div class="test-type-container">
+                <!-- CAJA NEGRA -->
+                <div class="test-box black-box">
+                    <h3>Pruebas Funcionales (Caja Negra)</h3>
+                    <p>Se enfocan en <strong>qué hace</strong> el sistema. Se verifica el comportamiento externo sin conocer la implementación interna.</p>
+                    <ul>
+                        <li>Basadas en el documento <strong>SRS</strong> (Software Requirement Specification).</li>
+                        <li>Foco en usabilidad y requisitos del cliente.</li>
+                        <li>Herramientas clave: Diagramas de Casos de Uso.</li>
+                    </ul>
+                </div>
+
+                <!-- CAJA BLANCA -->
+                <div class="test-box white-box">
+                    <h3>Pruebas de Caja Blanca</h3>
+                    <p>Se enfocan en <strong>cómo lo hace</strong>. Permiten analizar el diseño, la estructura interna e incluso el código fuente.</p>
+                    <ul>
+                        <li>Buscan optimizar el rendimiento y seguridad.</li>
+                        <li>Requieren conocimientos de programación.</li>
+                        <li>Evalúan flujos lógicos y cobertura de sentencias.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section>
+                <h2>Pruebas No Funcionales</h2>
+                <p>Se enfocan en factores transversales relacionados con la experiencia del usuario y capacidades del sistema. Generalmente son sugeridas por el equipo técnico.</p>
+                <div class="non-functional-grid">
+                    <div class="nf-item">Usabilidad</div>
+                    <div class="nf-item">Seguridad</div>
+                    <div class="nf-item">Rendimiento / Carga</div>
+                    <div class="nf-item">Accesibilidad</div>
+                    <div class="nf-item">Escalabilidad</div>
+                    <div class="nf-item">Mantenibilidad</div>
+                </div>
+            </section>
+
+            <section class="smoke-test">
+                <h4>Pruebas Grises o de Humo (Smoke Test)</h4>
+                <p>Determinan la estabilidad de una compilación. Si esta prueba falla, no tiene sentido seguir adelante con el resto de las pruebas detalladas, ya que el sistema no es lo suficientemente estable.</p>
+            </section>
+
+            <section class="example-box">
+                <h3>Ejemplo: Registro de Usuario (Caja Negra)</h3>
+                <p>Para un requerimiento como "El sistema permitirá el registro", la prueba define entradas y salidas sin mirar el código:</p>
+                <code>
+                    <strong>Entrada:</strong> Nombre, Apellidos, Correo, Contraseña.<br>
+                    <strong>Proceso:</strong> (Desconocido por ser caja negra).<br>
+                    <strong>Salida:</strong> Mensaje "El usuario ha sido registrado".
+                </code>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

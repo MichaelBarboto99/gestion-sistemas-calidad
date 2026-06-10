@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.1 Tipos de Equipos de Trabajo | Mejora Continua</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        /* Comparativa Grupo vs Equipo */
+        .vs-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+        @media (max-width: 768px) { .vs-container { grid-template-columns: 1fr; } }
+        .vs-card { padding: 20px; border-radius: 8px; border: 1px solid #ddd; }
+        .vs-card h3 { margin-top: 0; text-align: center; color: var(--primary-blue); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .vs-card ul { list-style: none; padding: 0; }
+        .vs-card li { margin-bottom: 10px; font-size: 0.9rem; }
+        .vs-card.group { background: #fdf2e9; }
+        .vs-card.team { background: #eef6ff; border-color: var(--primary-blue); }
+
+        /* Categorías de Equipos */
+        .team-types { margin-top: 40px; }
+        .team-item { display: flex; gap: 20px; margin-bottom: 25px; align-items: flex-start; }
+        .team-icon { background: var(--accent-orange); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: bold; }
+        .team-info h4 { margin: 0 0 5px 0; color: var(--primary-blue); }
+        .team-info p { margin: 0; font-size: 0.95rem; }
+
+        /* Tabla Resumen */
+        .summary-table-container { overflow-x: auto; margin: 30px 0; }
+        .summary-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        .summary-table th, .summary-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .summary-table th { background: var(--primary-blue); color: white; }
+
+        .psych-box { background: #333; color: white; padding: 20px; border-radius: 8px; margin: 30px 0; }
+        .psych-box h3 { color: var(--accent-orange); margin-top: 0; }
+        
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 3: Mejoramiento Continuo</h1>
+            <p class="subtitle">Subtema 2.1: Tipos de equipos de trabajo en la Calidad</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section>
+                <h2>Grupo vs. Equipo de Trabajo</h2>
+                <p>Para implementar un sistema de calidad con éxito, los directivos y colaboradores deben entender la diferencia entre estas dos formas de interactuar:</p>
+                
+                <div class="vs-container">
+                    <div class="vs-card group">
+                        <h3>Grupo de Trabajo</h3>
+                        <ul>
+                            <li><strong>Interacción:</strong> Compartir información para tareas individuales.</li>
+                            <li><strong>Sinergia:</strong> Neutra o inexistente.</li>
+                            <li><strong>Responsabilidad:</strong> Individual únicamente.</li>
+                            <li><strong>Meta:</strong> Objetivos personales dentro de un área.</li>
+                        </ul>
+                    </div>
+                    <div class="vs-card team">
+                        <h3>Equipo de Trabajo</h3>
+                        <ul>
+                            <li><strong>Interacción:</strong> Esfuerzo conjunto y coordinado.</li>
+                            <li><strong>Sinergia:</strong> Positiva (el todo es más que las partes).</li>
+                            <li><strong>Responsabilidad:</strong> Individual y mutua.</li>
+                            <li><strong>Meta:</strong> Desempeño colectivo y objetivos comunes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="psych-box">
+                <h3>Mecanismos Psicológicos</h3>
+                <p>Existen dos factores que explican por qué los humanos trabajan bien en equipo:</p>
+                <ul>
+                    <li><strong>Identificación Social:</strong> Genera un sentimiento de "orgullo de pertenencia", lo que refuerza la autoestima y motiva a mantener la calidad del trabajo.</li>
+                    <li><strong>Representación Social:</strong> Conjunto de ideas aceptadas que dan sentido a la realidad y al poder dentro del contexto organizacional.</li>
+                </ul>
+            </section>
+
+            <section class="team-types">
+                <h2>Categorías de Equipos de Calidad</h2>
+                
+                <div class="team-item">
+                    <div class="team-icon">1</div>
+                    <div class="team-info">
+                        <h4>Comités de Calidad</h4>
+                        <p>Integrados por la alta dirección y mandos intermedios. Su papel es diseñar e iniciar el programa de calidad y asegurar la coordinación entre departamentos.</p>
+                    </div>
+                </div>
+
+                <div class="team-item">
+                    <div class="team-icon">2</div>
+                    <div class="team-info">
+                        <h4>Círculos de Calidad</h4>
+                        <p>Grupos pequeños que realizan tareas similares y se reúnen <strong>voluntariamente</strong> para identificar y proponer soluciones a problemas de su área.</p>
+                    </div>
+                </div>
+
+                <div class="team-item">
+                    <div class="team-icon">3</div>
+                    <div class="team-info">
+                        <h4>Equipos de Mejora</h4>
+                        <p>De participación <strong>obligatoria</strong>. Se enfocan en solucionar problemas concretos, eliminar no conformidades y mejorar la productividad.</p>
+                    </div>
+                </div>
+
+                <div class="team-item">
+                    <div class="team-icon">4</div>
+                    <div class="team-info">
+                        <h4>Grupos Autodirigidos o Autónomos</h4>
+                        <p>Equipos permanentes (10 a 15 personas) integrados en la estructura. Tienen alto grado de decisión, eligen a sus miembros y evalúan su propio rendimiento.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="summary-table-container">
+                <h3>Comparativa de Equipos (Figura 2)</h3>
+                <table class="summary-table">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Comités</th>
+                            <th>Círculos</th>
+                            <th>Eq. Mejora</th>
+                            <th>Grupos Autodirigidos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Participación</td><td>Obligada</td><td>Voluntaria</td><td>Obligada</td><td>Obligada</td></tr>
+                        <tr><td>Temporalidad</td><td>Permanentes</td><td>Permanentes</td><td>Ad hoc (desaparecen)</td><td>Permanentes</td></tr>
+                        <tr><td>Decisión</td><td>Toman decisiones</td><td>Solo sugieren</td><td>Recomiendan</td><td>Deciden y ejecutan</td></tr>
+                        <tr><td>Vínculos</td><td>Paralelos</td><td>Mantienen estructura</td><td>Equipos paralelos</td><td>Integrados plenamente</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

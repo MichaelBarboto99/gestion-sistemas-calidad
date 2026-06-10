@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.2 Atributos y Normas de Calidad | Gestión de Calidad</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .steps-container { display: flex; flex-direction: column; gap: 20px; margin: 25px 0; }
+        .step-item { display: flex; align-items: flex-start; gap: 15px; background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 5px solid var(--primary-blue); }
+        .step-number { background: var(--primary-blue); color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0; }
+        .norm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px; }
+        .norm-card { background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 5px; border-top: 3px solid var(--accent-orange); }
+        .norm-card strong { color: var(--primary-blue); display: block; margin-bottom: 5px; }
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+        .entity-box { background: #fff4e6; padding: 15px; border-radius: 5px; margin: 20px 0; font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 1: Fundamentos de Calidad</h1>
+            <p class="subtitle">Subtema 2.2: Atributos generales de la calidad de software y normas</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section>
+                <h2>Etapas de la Gestión de Calidad</h2>
+                <p>La gestión de calidad en proyectos de software no es un evento único, sino un proceso que debe llevarse a cabo en tres etapas críticas:</p>
+                
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div>
+                            <strong>Planificación de la Calidad:</strong> 
+                            Es la fase inicial. Se identifican los requisitos (funcionalidad, eficiencia, usabilidad) y se definen los estándares y métricas que permitirán evaluar el producto y el rendimiento del proyecto.
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div>
+                            <strong>Gestión de la Calidad (Desarrollo):</strong> 
+                            Se orienta a las actividades durante la construcción. Incluye prácticas como revisiones de código, programación en parejas, integración continua y capacitación del equipo.
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div>
+                            <strong>Control de la Calidad:</strong> 
+                            Consiste en supervisar y registrar resultados. Aquí se realizan pruebas unitarias, de integración y de sistema para comprobar si el producto final cumple con los estándares definidos inicialmente.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Entidades Normativas</h2>
+                <p>Además de la ISO, existen otras entidades internacionales que contribuyen a los estándares de software:</p>
+                <div class="entity-box">
+                    <ul>
+                        <li><strong>IEC (Comisión Electrotécnica Internacional):</strong> Normaliza tecnologías eléctricas y electrónicas relacionadas.</li>
+                        <li><strong>UIT (Unión Internacional de Telecomunicaciones):</strong> Organismo de la ONU que garantiza la interconexión armoniosa de redes y TICs.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Normas y Modelos Principales</h2>
+                <p>A continuación se detallan las normas más relevantes mencionadas por Pantaleo (2016) para el desarrollo de software:</p>
+                
+                <div class="norm-grid">
+                    <div class="norm-card">
+                        <strong>ISO 12207</strong>
+                        Modelos de Ciclos de Vida del software.
+                    </div>
+                    <div class="norm-card">
+                        <strong>ISO/IEC 9126</strong>
+                        Evaluación de características de calidad de software.
+                    </div>
+                    <div class="norm-card">
+                        <strong>ISO/IEC 25000 (SQuaRE)</strong>
+                        Mejora que coordina e integra las normas 9126 y 14598.
+                    </div>
+                    <div class="norm-card">
+                        <strong>CMMI</strong>
+                        Modelo de madurez para la mejora de los procesos de construcción.
+                    </div>
+                    <div class="norm-card">
+                        <strong>SPICE</strong>
+                        Estándar para evaluar los procesos de software.
+                    </div>
+                    <div class="norm-card">
+                        <strong>ISO/IEC 14598</strong>
+                        Base metodológica para evaluar el software.
+                    </div>
+                </div>
+            </section>
+
+            <section style="margin-top: 30px;">
+                <p><em>"El jefe del departamento de calidad es responsable de revisar estas normas y socializarlas con el equipo, ya que la calidad se inicia en la automatización del proceso."</em></p>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

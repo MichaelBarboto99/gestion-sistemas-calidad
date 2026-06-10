@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.2 ISO/IEC 12207 Ciclo de Vida | Sistemas de Calidad</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        .lifecycle-intro { border-left: 5px solid var(--accent-orange); background: #fff9f0; padding: 20px; margin-bottom: 25px; }
+        
+        /* Contenedor de Grupos de Procesos */
+        .process-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0; }
+        .group-card { border: 1px solid #ddd; border-radius: 8px; overflow: hidden; }
+        .group-card h4 { background: var(--primary-blue); color: white; margin: 0; padding: 10px; text-align: center; font-size: 0.9rem; text-transform: uppercase; }
+        .group-card ul { list-style: none; padding: 15px; margin: 0; }
+        .group-card li { margin-bottom: 8px; font-size: 0.9rem; padding-left: 15px; position: relative; }
+        .group-card li::before { content: "•"; position: absolute; left: 0; color: var(--accent-orange); font-weight: bold; }
+
+        /* Cuadros de Conformidad */
+        .compliance-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+        @media (max-width: 600px) { .compliance-grid { grid-template-columns: 1fr; } }
+        .compliance-box { background: #f0f4f8; padding: 15px; border-radius: 8px; border: 1px dashed var(--primary-blue); }
+        .compliance-box h5 { margin-top: 0; color: var(--primary-blue); border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+
+        .check-list { background: #eef6ff; padding: 20px; border-radius: 8px; }
+        .check-list h4 { margin-top: 0; color: var(--primary-blue); }
+        
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 2: Sistemas de Calidad</h1>
+            <p class="subtitle">Subtema 2.2: ISO/IEC 12207. Ciclo de vida del software</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section class="lifecycle-intro">
+                <h2>¿Qué es el Ciclo de Vida del Software?</h2>
+                <p>Es la secuencia estructurada y bien definida de las etapas por las que pasa el software, desde que se concibe la idea hasta que deja de utilizarse (obsolescencia). La norma de referencia es la <strong>ISO/IEC/IEEE 12207:2017</strong>.</p>
+            </section>
+
+            <section>
+                <h3>Dimensiones de los Procesos</h3>
+                <p>La norma organiza las actividades en tres grandes grupos:</p>
+                
+                <div class="process-groups">
+                    <!-- PRIMARIOS -->
+                    <div class="group-card">
+                        <h4>Procesos Primarios</h4>
+                        <ul>
+                            <li><strong>ACQ:</strong> Procesos del Cliente (Adquisición).</li>
+                            <li><strong>SPL:</strong> Procesos del Proveedor (Suministro).</li>
+                            <li><strong>ENG:</strong> Ingeniería (Desarrollo).</li>
+                            <li><strong>OPE:</strong> Operación.</li>
+                        </ul>
+                    </div>
+
+                    <!-- SOPORTE -->
+                    <div class="group-card">
+                        <h4>Procesos de Soporte</h4>
+                        <ul>
+                            <li><strong>SUP:</strong> Soporte (Validaciones, Verificación, Aseguramiento de Calidad, Gestión de Configuración).</li>
+                        </ul>
+                    </div>
+
+                    <!-- ORGANIZACIONALES -->
+                    <div class="group-card">
+                        <h4>Procesos de la Organización</h4>
+                        <ul>
+                            <li><strong>MAN:</strong> Gestión.</li>
+                            <li><strong>REU:</strong> Recursos Humanos.</li>
+                            <li><strong>RIN:</strong> Infraestructura.</li>
+                            <li><strong>PIM:</strong> Mejora de procesos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3>Formas de Conformidad</h3>
+                <p>Existen dos formas de confirmar que una implementación se ajusta a este estándar:</p>
+                <div class="compliance-grid">
+                    <div class="compliance-box">
+                        <h5>Conformidad Completa</h5>
+                        <p>Cuando se demuestra que <strong>todos</strong> los procesos establecidos por la norma han sido satisfechos.</p>
+                    </div>
+                    <div class="compliance-box">
+                        <h5>Conformidad a la Medida</h5>
+                        <p>Cuando se utiliza como base solo un <strong>conjunto específico</strong> de procesos adecuados al proyecto.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="check-list">
+                <h4>Aspectos clave para la aplicación</h4>
+                <p>Para aplicar el estándar, se deben considerar factores como:</p>
+                <ul>
+                    <li><strong>Tipo de software:</strong> Nuevo, firmware, reutilizado o embebido.</li>
+                    <li><strong>Rol en el Ciclo de Vida:</strong> ¿Es usted comprador, proveedor o desarrollador?</li>
+                    <li><strong>Modelo de Desarrollo:</strong> Cascada, Incremental, Evolutivo o Espiral.</li>
+                    <li><strong>Políticas Organizacionales:</strong> Leyes nacionales y reglamentos de seguridad pública o ambiental.</li>
+                </ul>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>

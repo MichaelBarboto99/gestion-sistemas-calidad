@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.3 Modelos de Gestión de Calidad | Mejora Continua</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../favicon_gsc.svg">
+    <style>
+        .content-section { background: white; padding: 30px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        .approach-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 25px 0; }
+        .approach-card { background: #f8f9fa; border: 1px solid #ddd; padding: 15px; border-radius: 8px; }
+        .approach-card h4 { color: var(--accent-orange); margin-top: 0; }
+
+        /* Modelos de Excelencia */
+        .excellence-models { margin-top: 40px; }
+        .model-item { border-left: 5px solid var(--primary-blue); background: #eef6ff; padding: 20px; border-radius: 0 8px 8px 0; margin-bottom: 20px; }
+        .model-item h3 { margin-top: 0; color: var(--primary-blue); }
+        .model-origin { display: inline-block; background: var(--primary-blue); color: white; padding: 2px 10px; border-radius: 4px; font-size: 0.8rem; margin-bottom: 10px; }
+
+        /* Tabla de Criterios */
+        .comparison-container { overflow-x: auto; margin: 30px 0; }
+        .comparison-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+        .comparison-table th, .comparison-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        .comparison-table th { background: var(--primary-blue); color: white; text-align: center; }
+        .comparison-table tr:nth-child(even) { background: #fafafa; }
+
+        .efqm-levels { background: #fff9f0; padding: 20px; border: 1px dashed var(--accent-orange); border-radius: 8px; margin-top: 20px; }
+        
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Unidad 3: Mejoramiento Continuo</h1>
+            <p class="subtitle">Subtema 1.3: Modelos de gestión de la calidad (Excelencia)</p>
+        </div>
+    </header>
+
+    <nav class="breadcrumb">
+        <div class="container">
+            <a href="../index.html" class="btn-back">← Volver al Índice</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="content-section">
+            
+            <section>
+                <h2>Enfoques de la Gestión de Calidad</h2>
+                <p>Un modelo de gestión de la calidad es un instrumento de autoevaluación que busca detectar fallos y desviaciones para aplicar medidas correctivas. Se puede explicar desde tres enfoques:</p>
+                <div class="approach-grid">
+                    <div class="approach-card">
+                        <h4>Enfoque Técnico</h4>
+                        <p>Mide la eficiencia de los procesos productivos y su control.</p>
+                    </div>
+                    <div class="approach-card">
+                        <h4>Enfoque Humano</h4>
+                        <p>Se centra en las personas y en que todo el equipo busque la eficiencia.</p>
+                    </div>
+                    <div class="approach-card">
+                        <h4>Enfoque Estratégico</h4>
+                        <p>Orientación externa hacia los mercados y las necesidades del cliente.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="excellence-models">
+                <h2>Modelos de Excelencia Internacionales</h2>
+
+                <!-- DEMING -->
+                <div class="model-item">
+                    <span class="model-origin">JAPÓN (1951)</span>
+                    <h3>Modelo Deming</h3>
+                    <p>Creado por la JUSE. Su objetivo es implementar indicadores que garanticen que la calidad redunde en beneficios directos para el consumidor.</p>
+                </div>
+
+                <!-- BALDRIGE -->
+                <div class="model-item">
+                    <span class="model-origin">USA (1987)</span>
+                    <h3>Modelo Malcolm Baldrige</h3>
+                    <p>Busca aumentar la competitividad mediante pautas claras en fabricación y distribución. Utiliza una guía de puntuación para asignar fortalezas y áreas de mejora.</p>
+                </div>
+
+                <!-- EFQM -->
+                <div class="model-item">
+                    <span class="model-origin">EUROPA (1988)</span>
+                    <h3>Modelo EFQM</h3>
+                    <p>Basado en la Gestión de Calidad Total (TQM). Se compone de 9 criterios: 5 "agentes facilitadores" (lo que la organización hace) y 4 "resultados" (lo que la organización logra).</p>
+                </div>
+            </section>
+
+            <section class="comparison-container">
+                <h3>Comparativa de Criterios (Figura 7)</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Modelo Malcolm Baldrige</th>
+                            <th>Modelo EFQM (Excelencia)</th>
+                            <th>Modelo Deming Prize</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1. Liderazgo</td><td>1. Liderazgo</td><td>1. Políticas de dirección</td></tr>
+                        <tr><td>2. Planificación estratégica</td><td>2. Política y estrategia</td><td>2. Desarrollo de nuevos productos</td></tr>
+                        <tr><td>3. Enfoque en el cliente</td><td>3. Personas</td><td>3. Mantenimiento y mejora</td></tr>
+                        <tr><td>4. Medida, análisis y conocimiento</td><td>4. Alianzas y recursos</td><td>4. Recogida y uso de información</td></tr>
+                        <tr><td>5. Enfoque en RRHH</td><td>5. Procesos</td><td>5. Sistemas de dirección</td></tr>
+                        <tr><td>6. Gestión por procesos</td><td>6. Resultados en clientes / 7. Personas</td><td>6. Análisis de información y TICs</td></tr>
+                        <tr><td>7. Resultados</td><td>8. Resultados en sociedad / 9. Clave</td><td>—</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="efqm-levels">
+                <h4>Niveles de Madurez EFQM</h4>
+                <p>El modelo EFQM propone una evolución en 5 etapas:</p>
+                <ol>
+                    <li><strong>Actividad orientada:</strong> Énfasis en las tareas.</li>
+                    <li><strong>Proceso orientado:</strong> Control de procesos clave.</li>
+                    <li><strong>Sistema orientado:</strong> La organización es un todo integrado.</li>
+                    <li><strong>Cadena orientada:</strong> Control sobre toda la cadena de valor (proveedores/clientes).</li>
+                    <li><strong>Gestión de Calidad Total (TQM):</strong> Mejora continua / Gemba Kaizen.</li>
+                </ol>
+            </section>
+
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Materia de Gestión de Sistemas de Calidad</p>
+        </div>
+    </footer>
+
+</body>
+</html>
